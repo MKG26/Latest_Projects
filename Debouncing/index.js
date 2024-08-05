@@ -25,11 +25,13 @@ let magic = (obj, parent) => {
 
     for(let key in obj){
 
-        if(obj[key] === 'Object'){
+        if(obj[key] === 'Object')
+        {
 
             magic(obj[key], "parent"+"_"+"key");
         }
-        else{
+        else
+        {
 
             finalObject[parent + "_" + key] = obj[key];
         }
